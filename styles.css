@@ -114,6 +114,14 @@ body {
     width: 100%;
 }
 
+.nav-link.telegram-button {
+    display: none;
+}
+
+.nav-link.telegram-button::after {
+    display: none;
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -1042,7 +1050,7 @@ body {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 120px;
+        top: 71px;
         flex-direction: column;
         background-color: white;
         width: 100%;
@@ -1058,6 +1066,44 @@ body {
 
     .nav-toggle {
         display: flex;
+    }
+
+    .nav-container {
+        margin: 3px auto;
+    }
+
+    .nav-link.telegram-button {
+        display: flex;
+        background: linear-gradient(135deg, #0088cc 0%, #006699 100%);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        margin: 1rem auto 0;
+        transition: all 0.3s ease;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-weight: 600;
+        box-shadow: 0 2px 8px rgba(0, 136, 204, 0.3);
+        border: 2px solid transparent;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .nav-link.telegram-button:hover {
+        background: linear-gradient(135deg, #006699 0%, #004d73 100%);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-link.telegram-button .telegram-text {
+        font-size: 1rem;
+    }
+
+    .nav-link.telegram-button i {
+        font-size: 1.2rem;
     }
 
     .nav-toggle.active .bar:nth-child(2) {
@@ -1301,6 +1347,20 @@ body {
 
     .navbar {
         top: 133px;
+    }
+
+    .nav-link.telegram-button {
+        padding: 0.875rem 1.5rem;
+        max-width: 180px;
+        margin-top: 0.75rem;
+    }
+
+    .nav-link.telegram-button .telegram-text {
+        font-size: 0.9rem;
+    }
+
+    .nav-link.telegram-button i {
+        font-size: 1.1rem;
     }
 }
 
